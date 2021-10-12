@@ -76,7 +76,7 @@ class SenpaiCompiler:
         return code
 
     @staticmethod
-    def process_iops(self, code):
+    def process_iops(code):
         """
         convert things like a=a-1 to a-=1
         """

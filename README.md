@@ -8,7 +8,8 @@
 
 - Probably more reliable than the standard implementation because this converts the syntax tree itself directly into Python instead of interpreting a tree and executing some potentially buggy Python code.
 
-
+## Installation
+Senpython can be installed with `pip install senpython` 
 ## Differences Compared to the Standard "Flavour"
 Due to the nature of Python and the method of transpiling, there are some differences than the interpreter implementation:  
 - Functions and loops have a scope. This means that variables defined in a function or a loop only exist in that function or loop.
