@@ -46,12 +46,12 @@ class SenpaiCompiler:
     @staticmethod
     def process_imports(code):
         c = code
-        d = re.finditer('(\x03".*")', code)
-        imports = [(i.group(), i.group().strip(IMPORT).strip('"')) for i in d]
+        d = re.finditer('(\x03("|\').*\\2)', code)
+        imports = [(i.group(), i.group().strip(IMPORT).strip('"').strip("'")) for i in d]
         for i in imports:
             group = i[0]
             module = i[1]
-            if module.lstrip('[').lstrip(']') == module:
+            if module.lstrip('[').rstrip(']') == module:
 
                 with open(module) as f:
                     module_code = SenpaiCompiler(f.read()).compile(do_header=False).out_code

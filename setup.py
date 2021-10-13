@@ -9,7 +9,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 setup(
     name='senpython',  # How you named your package folder (MyLib)
     packages=find_packages(),  # Choose the same as "name"
-    version='0.0.2',  # Start with a small number and increase it with every change you make
+    version='0.0.3',  # Start with a small number and increase it with every change you make
     license='mit',  # Chose a license from here: https://help.github.com/articles/licensing-a-repository
     description='Senpai is an esoteric programming language that is inspired by anime girls. Don\'t ask why I made this.',  # Give a short description about your library
     long_description=long_description,
