@@ -60,11 +60,11 @@ def custom_except_hook(_type, value, tb):
     print("The status of stacks before the error occurred was:\n", file=_sys.stderr)
 
     for name in stacks:
-        print(f'\t{name}: ', file=_sys.stderr, end='\n\t\t')
+        print(f'\t{name}: ', file=_sys.stderr, end='\n')
         for i, item in enumerate([repr(item) for item in stacks[name]]):
-            print(i, item, file=_sys.stderr, sep='\t', end='\n\t\t')
-
-    print('\b\b', file=_sys.stderr)
+            print('\t\t', i, item, file=_sys.stderr, sep='\t', end='\n')
+        print(file=_sys.stderr)
+    print('\b \b', file=_sys.stderr)
 
 
 if _use_custom_except:

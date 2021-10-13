@@ -105,9 +105,11 @@ class SenpaiCompiler:
         code = self.process_iops(code)
         code = self.convert_len_to_int(code)
 
-        self.out_code = code
         if self.do_py_traceback:
             code = code.replace('_use_custom_except = True', '_use_custom_except = False')
+
+        self.out_code = code
+       
         return self
 
     def export(self, file_path):

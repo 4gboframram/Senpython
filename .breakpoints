@@ -1,3 +1,12 @@
 {
-  "files": {}
+  "files": {
+    "senpython/compiler.py": [
+      {
+        "id": "da5cd5f0-d9db-4870-b4ae-602448f876f9",
+        "line": 105,
+        "version": 235,
+        "index": 3419
+      }
+    ]
+  }
 }
